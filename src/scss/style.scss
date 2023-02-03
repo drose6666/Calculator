@@ -1,0 +1,50 @@
+/* 
+----------------------------------------------------------------------
+   ! IMPORT
+----------------------------------------------------------------------
+*/ 
+
+@import './_vars';
+@import './_mixins';
+
+
+
+
+
+* {
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      -webkit-tap-highlight-color: transparent;
+   scroll-behavior: smooth;
+}
+
+button {
+   border: none;
+   background: transparent;
+   &:active, &:focus {
+      border: none;
+   }
+}
+html,body {
+   height: 100%;
+   // all: unset; // сбрасывыает все стили до значений по умолчанию
+}
+
+body {
+   position: relative;
+   font-family: $Gilroy;
+   font-weight: 400;
+   &.no-scroll {
+      overflow: hidden;
+   }
+}
+
+a, a:focus, a:hover, a:active,
+button, button:hover, button:active,
+input, input:focus, input:hover, input:active {
+   text-decoration: none;
+   outline: none;
+   // all: unset;
+   cursor: pointer;
+}
+
