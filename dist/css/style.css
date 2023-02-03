@@ -4,6 +4,38 @@
 ----------------------------------------------------------------------
 */
 
+:root[theme=dark] {
+  --action: #FB1845;
+  --action_color: #fff;
+  --calculator_bg: #232228;
+  --text: #8C8A95;
+  --disabled: #6E6D73;
+  --signs: #34333B;
+  --menu_color: #2A292F;
+  --border_color: #55545C;
+  --border: 1px solid var(--border_color);
+  --active_shadow: inset 0px 3px 4px 4px rgba(0, 0, 0, 0.3);
+  --calc_shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.15);
+  --btn_shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.15);
+  --menu_shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.15);
+}
+
+:root[theme=light] {
+  --action: #FB1845;
+  --action_color: #fff;
+  --calculator_bg: #fff;
+  --text: #55545C;
+  --disabled: #8C8A95;
+  --signs: #FFE4EA;
+  --menu_color: #fff;
+  --border_color: #D1CFDD;
+  --border: 1px solid var(--border_color);
+  --active_shadow: inset 0px 3px 5px 3px rgba(78, 0, 17, 0.3);
+  --calc_shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.15);
+  --btn_shadow: 0px 15px 15px -2px rgba(116, 0, 23, 0.11);
+  --menu_shadow: 0px 15px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
 /* 
 ----------------------------------------------------------------------
    ! IMPORT
@@ -51,7 +83,6 @@ body {
 
 body {
   position: relative;
-  font-family: "Gilroy", sans-serif;
   font-weight: 400;
 }
 
