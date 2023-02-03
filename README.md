@@ -4,8 +4,8 @@ A JavaScript calculator designed to practice skills and gain experience in a reg
 
 ## Preview
 
-![App Screenshot](http://danilarose.net/screen_1.jpg)
-![App Screenshot](http://danilarose.net/screen_2.jpg)
+![App Screenshot](http://danilarose.net/calculator/screen_1.jpg)
+![App Screenshot](http://danilarose.net/calculator/screen_2.jpg)
 
 
 ## Tech Stack
