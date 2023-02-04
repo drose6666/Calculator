@@ -1,5 +1,5 @@
 .calculator {
-  padding-top: 10px;
+  padding-top: 5px;
   max-width: 446px;
   width: 100%;
   border-radius: 30px;
@@ -8,26 +8,43 @@
 
   .display {
     margin-bottom: 30px;
-    padding: 10px 0;
+    padding: 5px 34px 0 34px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    max-height: 140px;
-    height: 100%;
-    overflow: auto;
 
-    .history {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 20px;
-      color: var(--text);
+    .history-wrap {
+      padding: 5px 0 5px 5px;
+      height: 125px;
+      width: 378px;
+      overflow: auto;
+      .history {
+        padding: 0 5px 2px 0;
+        min-height: 100%;
+        min-width: max-content;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        align-content: flex-end;
+        justify-items: flex-end;
+        row-gap: 15px;
+  
+        li {
+          font-size: 17px;
+          font-weight: 500;
+          line-height: 17px;
+          color: var(--text);
+          text-align: right;
+          white-space: nowrap;
+        }
+      }
     }
 
     .result {
       margin-top: 35px;
-      font-size: 20px;
+      font-size: 80px;
       font-weight: 500;
-      line-height: 20px;
+      line-height: 65px;
       color: var(--action);
     }
   }
@@ -43,6 +60,44 @@
       flex-wrap: wrap;
       column-gap: 30px;
       row-gap: 40px;
+      &.indented {
+        margin-bottom: 40px;
+      }
+
+      .menu {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border-radius: 50px;
+        box-shadow: var(--calc_shadow);
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        opacity: 0;
+        visibility: hidden;
+        background: var(--signs);
+        transform: translateX(-50%);
+        transition: all 0.3s ease-out;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          border-left: 14px solid transparent;
+          border-right: 14px solid transparent;
+          border-top: 10px solid var(--signs);
+          border-radius: 1px;
+        }
+      }
+      .btn.active {
+        .menu {
+          opacity: 1;
+          visibility: visible;
+          top: -140%;
+        }
+      }
     }
   }
 }

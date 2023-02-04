@@ -10,10 +10,12 @@
    --menu_color: #2A292F;
    --border_color: #55545C;
    --active_shadow: inset 0px 3px 4px 4px rgba(0, 0, 0, 0.3);
-   --active_action_shadow: 0px 15px 30px 11px rgba(216, 4, 4, 0.15);
+   // --active_action_shadow: 0px 15px 30px rgba(216, 4, 4, 0.15);
    --calc_shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.15);
    --btn_shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.15);
    --menu_shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.15);
+   --scroll_bar: #201F24;
+   --scroll_bar_thumb: var(--signs)
 }
 
 :root[theme="light"] {
@@ -26,10 +28,12 @@
    --menu_color: #fff;
    --border_color: #D1CFDD;
    --active_shadow: inset 0px 3px 5px 3px rgba(78, 0, 17, 0.3);
-   --active_action_shadow: 0px 15px 30px 11px rgba(216, 4, 4, 0.15);
+   // --active_action_shadow: 0px 15px 30px 11px rgba(216, 4, 4, 0.15);
    --calc_shadow: 0px 15px 30px 11px rgba(0, 0, 0, 0.15);
    --btn_shadow: 0px 15px 15px -2px rgba(116, 0, 23, 0.11);
    --menu_shadow: 0px 15px 20px -2px rgba(0, 0, 0, 0.05);
+   --scroll-bar: #201F24;
+   // --scroll_bar_thumb
 }
 
 $Gilroy: 'Gilroy', sans-serif;

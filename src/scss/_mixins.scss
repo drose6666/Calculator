@@ -7,21 +7,23 @@
 
 // * button 
 @mixin button (
+   $width: 72px,
    $bg: transparent,
    $color: var(--text),
    $borderRadius: 50%,
    $shadow: none,
    $fSize: 27px,
+   $fWeight: 500,
    $lineHeight: 27px
 ) {
-   width: 72px;
-   height: 72px;
+   width: $width;
+   height: $width;
    background: $bg;
    border: 1px solid transparent;
    border-radius: $borderRadius;
    box-shadow: $shadow;
    font-size: $fSize;
-   font-weight: 500;
+   font-weight:$fWeight;
    line-height: $lineHeight;
    color: $color;
    display: flex;
@@ -30,16 +32,16 @@
    cursor: pointer;
    user-select: none;
    transition: all 0.2s ease-out;
-}
-
-%eventsButtons {
-   &:hover { border-color: var(--border_color); }
-   &:active, &:focus { box-shadow: var(--active_shadow); border-color: transparent; }
+   svg { transition: all 0.2s ease-out }
 }
 
 .btn {
    @include button;
-   @extend %eventsButtons;
+   &.has-menu {
+      position: relative;
+   }
+   &:hover { border-color: var(--border_color); }
+   &:active, &:focus { box-shadow: var(--active_shadow); border-color: transparent; }
 }
 
 .btn_dedicated {
@@ -47,7 +49,6 @@
       $fSize: 28px,
       $lineHeight: 28px
    );
-   @extend %eventsButtons
 }
 
 .btn_signs {
@@ -56,7 +57,7 @@
       $color: var(--action),
       $shadow: var(--btn_shadow)
    );
-   &:hover { box-shadow: none; background: transparent; }
+   &:hover { box-shadow: none; background: transparent; border-color: transparent; }
    &:active, &:focus { box-shadow: var(--active_shadow); }
 }
 
@@ -71,6 +72,38 @@
       flex: 0 0 46%;
       max-width: 46%;
    }
-   &:hover { box-shadow: var(--active_action_shadow);}
+   &:hover { box-shadow: none; border-color: transparent; }
    &:active, &:focus { box-shadow: var(--active_shadow); }
+}
+
+.btn_menu {
+   @include button (
+      $width: 62px,
+      $fSize: 27px,
+      $lineHeight: 27px,
+      $color: var(--disabled),
+      $bg: var(--menu_color)
+   );
+   &.selected {
+      color: var(--action);
+      svg { fill: var(--action); }
+   }
+   &.disabled {
+      color: var(--disabled);
+      font-weight: 400;
+      svg { fill: var(--disabled); }
+   }
+   &:hover { border-color: var(--border_color); }
+   &:active, &:focus { box-shadow: var(--active_shadow); border-color: transparent; }
+}
+
+.btn.long_signs {
+   font-size: 21px;
+   line-height: 21px;
+}
+
+.btn.active {
+   box-shadow: var(--active_shadow);
+   background: transparent; 
+   border-color: transparent;
 }

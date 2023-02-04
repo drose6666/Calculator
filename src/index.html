@@ -8,12 +8,23 @@
    <main>
       <div class="calculator">
          <div class="display">
-            <span class="history">5 + 6 x 1 583 + 1 589</span>
+            <div class="history-wrap">
+               <ul class="history">
+                  <li>1 225 - 562</li>
+                  <li>1 225 - 562</li>
+                  <li>1 225 - 562</li>
+                  <li>1 225 - 562</li>
+                  <li>1 225 - 562 + 78 546 - 458 454 454 4547 995 484 565698</li>
+                  <li>1 225 - 562</li>
+                  <li>1 225 - 562</li>
+                  <li>1 225 - 562</li>
+               </ul>
+            </div>
             <span class="result">10 972</span>
          </div>
 
          <div class="table">
-            <ul class="buttons">
+            <ul class="buttons indented">
                <li class="btn btn_dedicated">mc</li>
                <li class="btn btn_dedicated">m+</li>
                <li class="btn btn_dedicated">m-</li>
@@ -22,7 +33,13 @@
 
             <ul class="buttons">
                <li class="btn btn_signs">C</li>
-               <li class="btn btn_signs has-menu">%</li>
+               <li class="btn btn_signs has-menu active"> %
+                  <ul class="menu">
+                     <li class="btn btn_menu selected">%</li>
+                     <li class="btn btn_menu disabled"><svg width="22" height="19"><use xlink:href="../img/optimized/svg-sprite.svg#sqrt"></use></svg></li>
+                     <li class="btn btn_menu disabled long_signs">Exp</li>
+                  </ul>
+               </li>
                <li class="btn btn_signs">/</li>
                <li class="btn btn_signs"><svg width="11" height="20"><use xlink:href="../img/optimized/svg-sprite.svg#delete_arrow"></use></svg></li>
                <li class="btn">7</li>
