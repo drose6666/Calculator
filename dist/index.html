@@ -11,19 +11,55 @@
    <meta property="og:image" content="http://example.com/img/image.jpg">
    <meta property="og:site_name" content="Javascript calculator">
    
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?_v=20230203193230" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230203193230">
-   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230203193230">
-   <link rel="stylesheet" href="css/style.min.css?_v=20230203193230">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?_v=20230204102958" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="../libs/reset.min.css?_v=20230204102958">
+   <link rel="stylesheet" as="font" href="../fonts/fonts.css?_v=20230204102958">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230204102958">
    <title>Calculator on JavaScript</title>
 </head>
 
 <body>
 
    <main>
-      
+      <div class="calculator">
+         <div class="display">
+            <span class="history">5 + 6 x 1 583 + 1 589</span>
+            <span class="result">10 972</span>
+         </div>
+
+         <div class="table">
+            <ul class="buttons">
+               <li class="btn btn_dedicated">mc</li>
+               <li class="btn btn_dedicated">m+</li>
+               <li class="btn btn_dedicated">m-</li>
+               <li class="btn btn_dedicated">mr</li>
+            </ul>
+
+            <ul class="buttons">
+               <li class="btn btn_signs">C</li>
+               <li class="btn btn_signs has-menu">%</li>
+               <li class="btn btn_signs">/</li>
+               <li class="btn btn_signs"><svg width="11" height="20"><use xlink:href="../img/optimized/svg-sprite.svg#delete_arrow"></use></svg></li>
+               <li class="btn">7</li>
+               <li class="btn">8</li>
+               <li class="btn">9</li>
+               <li class="btn btn_signs"><svg width="13" height="13"><use xlink:href="../img/optimized/svg-sprite.svg#multiplication"></use></svg></li>
+               <li class="btn">4</li>
+               <li class="btn">5</li>
+               <li class="btn">6</li>
+               <li class="btn btn_signs">+</li>
+               <li class="btn">1</li>
+               <li class="btn">2</li>
+               <li class="btn">3</li>
+               <li class="btn btn_signs">-</li>
+               <li class="btn">0</li>
+               <li class="btn">.</li>
+               <li class="btn btn_action btn_equal">=</li>
+            </ul>
+         </div>
+      </div>
    </main>
 
-   <script defer src="js/bundle.min.js?_v=20230203193230"></script>
+   <script defer src="js/bundle.min.js?_v=20230204102958"></script>
 </body>
 </html>

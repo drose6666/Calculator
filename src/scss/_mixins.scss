@@ -1,52 +1,76 @@
-/* 
-----------------------------------------------------------------------
-   ! IMPORT
-----------------------------------------------------------------------
-*/
+// ? imports
+
 @use "sass:list";
 @use "sass:math";
 
-/* 
-----------------------------------------------------------------------
-   TODO: Container
-----------------------------------------------------------------------
-*/
 
-@mixin container (
-   $maxWidth: 1440px,
-   $margin: 0 auto,
-   $padding: 0 20px,
-   $flex: false,
-   $grid: false,
-   $columns: 0,
-   $rows: auto,
-   $gap: 30px,
-   $alignX: space-between,
-   $alignY: center,
-   ) {
-      margin: $margin;
-      padding: $padding;
-      max-width: $maxWidth;
-      width: 100%;
-      position: relative;
-      z-index: 1;
 
-      @if $flex {
-         display: flex;
-         align-items: $alignY;
-         justify-content: $alignX;
-         gap: $gap;
-      }
-
-      @if $grid {
-         display: grid;
-         grid-template-columns: $columns;
-         grid-template-rows: $rows;
-         align-items: $alignY;
-         gap: $gap
-      }
+// * button 
+@mixin button (
+   $bg: transparent,
+   $color: var(--text),
+   $borderRadius: 50%,
+   $shadow: none,
+   $fSize: 27px,
+   $lineHeight: 27px
+) {
+   width: 72px;
+   height: 72px;
+   background: $bg;
+   border: 1px solid transparent;
+   border-radius: $borderRadius;
+   box-shadow: $shadow;
+   font-size: $fSize;
+   font-weight: 500;
+   line-height: $lineHeight;
+   color: $color;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   user-select: none;
+   transition: all 0.2s ease-out;
 }
 
-.ui-container {
-   @include container
+%eventsButtons {
+   &:hover { border-color: var(--border_color); }
+   &:active, &:focus { box-shadow: var(--active_shadow); border-color: transparent; }
+}
+
+.btn {
+   @include button;
+   @extend %eventsButtons;
+}
+
+.btn_dedicated {
+   @include button (
+      $fSize: 28px,
+      $lineHeight: 28px
+   );
+   @extend %eventsButtons
+}
+
+.btn_signs {
+   @include button (
+      $bg: var(--signs),
+      $color: var(--action),
+      $shadow: var(--btn_shadow)
+   );
+   &:hover { box-shadow: none; background: transparent; }
+   &:active, &:focus { box-shadow: var(--active_shadow); }
+}
+
+.btn_action  {
+   @include button (
+      $bg: var(--action),
+      $color: var(--action_color),
+      $shadow: var(--calc_shadow),
+      $borderRadius: 50px
+   );
+   &.btn_equal {
+      flex: 0 0 46%;
+      max-width: 46%;
+   }
+   &:hover { box-shadow: var(--active_action_shadow);}
+   &:active, &:focus { box-shadow: var(--active_shadow); }
 }
