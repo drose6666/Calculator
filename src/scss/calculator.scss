@@ -1,6 +1,6 @@
 .calculator {
   padding-top: 5px;
-  max-width: 446px;
+  max-width: min-content;
   width: 100%;
   border-radius: 30px;
   background: var(--calc_bg);
@@ -55,7 +55,9 @@
     background: var(--menu_color);
 
     .buttons {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
       align-items: center;
       flex-wrap: wrap;
       column-gap: 30px;

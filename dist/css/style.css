@@ -36,16 +36,6 @@
 .btn {
   width: 72px;
   height: 72px;
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  font-size: 27px;
-  font-weight: 500;
-  line-height: 27px;
-  color: var(--text);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -61,6 +51,16 @@
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 27px;
+  color: var(--text);
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -95,16 +95,6 @@
 .btn_dedicated {
   width: 72px;
   height: 72px;
-  background: transparent;
-  border: 1px solid transparent;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 28px;
-  color: var(--text);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -120,6 +110,16 @@
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: transparent;
+  border: 1px solid transparent;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--text);
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -139,16 +139,6 @@
 .btn_signs {
   width: 72px;
   height: 72px;
-  background: var(--signs);
-  border: 1px solid transparent;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  -webkit-box-shadow: var(--btn_shadow);
-          box-shadow: var(--btn_shadow);
-  font-size: 27px;
-  font-weight: 500;
-  line-height: 27px;
-  color: var(--action);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -164,6 +154,16 @@
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: var(--signs);
+  border: 1px solid transparent;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-shadow: var(--btn_shadow);
+          box-shadow: var(--btn_shadow);
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 27px;
+  color: var(--action);
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -196,16 +196,6 @@
 .btn_action {
   width: 72px;
   height: 72px;
-  background: var(--action);
-  border: 1px solid transparent;
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
-  -webkit-box-shadow: var(--calc_shadow);
-          box-shadow: var(--calc_shadow);
-  font-size: 27px;
-  font-weight: 500;
-  line-height: 27px;
-  color: var(--action_color);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -221,6 +211,16 @@
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: var(--action);
+  border: 1px solid transparent;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  -webkit-box-shadow: var(--calc_shadow);
+          box-shadow: var(--calc_shadow);
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 27px;
+  color: var(--action_color);
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -238,12 +238,10 @@
 }
 
 .btn_action.btn_equal {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 46%;
-     -moz-box-flex: 0;
-      -ms-flex: 0 0 46%;
-          flex: 0 0 46%;
-  max-width: 46%;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/5;
+  width: 100%;
 }
 
 .btn_action:hover {
@@ -261,16 +259,6 @@
 .btn_menu {
   width: 62px;
   height: 62px;
-  background: var(--menu_color);
-  border: 1px solid transparent;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  font-size: 27px;
-  font-weight: 500;
-  line-height: 27px;
-  color: var(--disabled);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -286,6 +274,16 @@
      -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: var(--menu_color);
+  border: 1px solid transparent;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 27px;
+  color: var(--disabled);
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -344,7 +342,9 @@
 
 .calculator {
   padding-top: 5px;
-  max-width: 446px;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
   width: 100%;
   -webkit-border-radius: 30px;
           border-radius: 30px;
@@ -426,11 +426,12 @@
 }
 
 .calculator .table .buttons {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
   -webkit-box-align: center;
   -webkit-align-items: center;
      -moz-box-align: center;

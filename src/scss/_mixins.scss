@@ -18,20 +18,21 @@
 ) {
    width: $width;
    height: $width;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    background: $bg;
    border: 1px solid transparent;
    border-radius: $borderRadius;
    box-shadow: $shadow;
    font-size: $fSize;
-   font-weight:$fWeight;
+   font-weight: $fWeight;
    line-height: $lineHeight;
    color: $color;
-   display: flex;
-   align-items: center;
-   justify-content: center;
    cursor: pointer;
    user-select: none;
    transition: all 0.2s ease-out;
+   
    svg { transition: all 0.2s ease-out }
 }
 
@@ -69,8 +70,8 @@
       $borderRadius: 50px
    );
    &.btn_equal {
-      flex: 0 0 46%;
-      max-width: 46%;
+      grid-column: 3 / 5;
+      width: 100%;
    }
    &:hover { box-shadow: none; border-color: transparent; }
    &:active, &:focus { box-shadow: var(--active_shadow); }
